@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenChat", "Src\ZenChat\ZenChat.csproj", "{D92995EA-CCEB-4A53-A25C-DAFE73627F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenChat.Module", "Src\ZenChat.Module\ZenChat.Module.csproj", "{BD5DD9FB-6773-4E88-BD7E-9C18BA1FA487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D92995EA-CCEB-4A53-A25C-DAFE73627F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92995EA-CCEB-4A53-A25C-DAFE73627F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92995EA-CCEB-4A53-A25C-DAFE73627F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92995EA-CCEB-4A53-A25C-DAFE73627F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD5DD9FB-6773-4E88-BD7E-9C18BA1FA487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5DD9FB-6773-4E88-BD7E-9C18BA1FA487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5DD9FB-6773-4E88-BD7E-9C18BA1FA487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5DD9FB-6773-4E88-BD7E-9C18BA1FA487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5266230-27C2-40EE-A55B-A2854BE9AA67}
+	EndGlobalSection
+EndGlobal

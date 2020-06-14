@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ZenChat.Module">
+    <FontFamily x:Key="ChatMsgSendToolIconFont">pack://application:,,,/Styles/Fonts/#ChatMsgSendToolIconFont</FontFamily>
+    <FontFamily x:Key="ModuleListItemIconFont">pack://application:,,,/Styles/Fonts/#ModuleListItemIconFont</FontFamily>
+</ResourceDictionary>

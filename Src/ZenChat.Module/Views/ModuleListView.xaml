@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="ZenChat.Module.Views.ModuleListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZenChat.Module.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="60">
+    <UserControl.Resources>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Margin="5"
+            />
+        <ListBox Grid.Row="1" 
+                 x:Name="ModuleListItems"
+                 ItemContainerStyle="{StaticResource ModuleListItemStyle}"
+            />
+    </Grid>
+</UserControl>
