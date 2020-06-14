@@ -1,27 +1,36 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 using Caliburn.Micro;
-using ZenChat.Module;
-using ZenChat.Module.ViewModels;
-using ZenChat.Module.Views;
+using ZenChat;
+using ZenChat.Events;
+using ZenChat.ViewModels;
+using ZenChat.Views;
 
 namespace ZenChat.ViewModels
 {
     [Export]
-    public class MainWindowViewModel : Conductor<Module.Module>.Collection.OneActive
+    public class MainWindowViewModel : Conductor<Module>.Collection.OneActive, IHandle<ModuleActivateEventArgs>
     {
         public ModuleListViewModel ModuleList { get; private set; }
 
+        public IEventAggregator EventAggregator { get; set; }
+
         [ImportingConstructor]
-        public MainWindowViewModel(ModuleListViewModel moduleList)
+        public MainWindowViewModel(ModuleListViewModel moduleList, IEventAggregator eventAggregator)
         {
             this.ModuleList = moduleList;
+            this.EventAggregator = eventAggregator;
+            this.EventAggregator.Subscribe(this);
         }
 
-        protected override void OnActivate()
+        public void Handle(ModuleActivateEventArgs message)
         {
-            base.OnActivate();
+            if (message.TheModule != this.ActiveItem)
+            {
+                this.ActivateItem(message.TheModule);
+            }
         }
     }
 }

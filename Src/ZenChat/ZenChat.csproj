@@ -40,6 +40,9 @@
     <Reference Include="Caliburn.Micro.Platform, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Caliburn.Micro.3.2.0\lib\net40\Caliburn.Micro.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
@@ -63,10 +66,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ChatListUpdateTimeToStringConverter.cs" />
+    <Compile Include="Converters\DateTimeToStringConverter.cs" />
+    <Compile Include="Events\ModuleActivateEventArgs.cs" />
+    <Compile Include="Events\ModuleListItemSelectedEventArgs.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="Tests\DataGenerator.cs" />
+    <Compile Include="ViewModels\AddressBook\AddressBookModuleViewModel.cs" />
+    <Compile Include="ViewModels\Chat\ChatModuleViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Interactivity\ChatInteractivityViewModel.cs" />
+    <Compile Include="ViewModels\Chat\List\ChatListItemViewModel.cs" />
+    <Compile Include="ViewModels\Chat\List\ChatListViewModel.cs" />
+    <Compile Include="ViewModels\ModuleListItemViewModel.cs" />
+    <Compile Include="ViewModels\ModuleListViewModel.cs" />
+    <Compile Include="Views\Chat\ChatModuleView.xaml.cs">
+      <DependentUpon>ChatModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Chat\Interactivity\ChatMainPanelView.xaml.cs">
+      <DependentUpon>ChatMainPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Chat\List\ChatListItem.xaml.cs">
+      <DependentUpon>ChatListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Chat\List\ChatListView.xaml.cs">
+      <DependentUpon>ChatListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\ModuleListView.xaml.cs">
+      <DependentUpon>ModuleListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ZenChatBootstrapper.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -96,18 +127,68 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Styles\Base\Fonts\ModuleIconFont.ttf" />
+    <None Include="Tests\Data\ChatListItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Styles\Base\Fonts\ModuleListItemIconFont.ttf" />
+    <Resource Include="Styles\Base\Fonts\ChatMsgSendToolIconFont.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Styles\Base\Colors\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Base\Colors\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Base\Converters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Base\Fonts\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ListBox\ListBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ControlStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Chat\ChatModuleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Chat\Interactivity\ChatMainPanelView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Chat\List\ChatListItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Chat\List\ChatListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MainWindowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ModuleListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ZenChat.Module\ZenChat.Module.csproj">
-      <Project>{bd5dd9fb-6773-4e88-bd7e-9c18ba1fa487}</Project>
-      <Name>ZenChat.Module</Name>
-    </ProjectReference>
+    <Folder Include="ViewModels\Settings\" />
+    <Folder Include="ViewModels\Tool\" />
+    <Folder Include="Views\AddressBook\" />
+    <Folder Include="Views\Tool\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

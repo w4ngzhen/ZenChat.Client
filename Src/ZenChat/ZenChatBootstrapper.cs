@@ -61,8 +61,6 @@ namespace ZenChat
         protected override IEnumerable<Assembly> SelectAssemblies()
         {
             List<Assembly> assemblies = base.SelectAssemblies().ToList();
-            Assembly moduleAssembly = Assembly.LoadFrom("ZenChat.Module.dll");
-            assemblies.Add(moduleAssembly);
             return assemblies;
         }
 

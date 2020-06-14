@@ -14,7 +14,7 @@
         <ContentControl x:Name="ModuleList"
                         />
         <ContentControl Grid.Column="1" 
-                        x:Name="CurrentModule"
+                        x:Name="ActiveItem"
                         />
     </Grid>
 </Window>
