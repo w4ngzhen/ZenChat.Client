@@ -3,11 +3,11 @@
 namespace ZenChat.Views.Chat.Interactivity
 {
     /// <summary>
-    /// Interaction logic for ChatMainPanelView.xaml
+    /// Interaction logic for ChatInteractivityView.xaml
     /// </summary>
-    public partial class ChatMainPanelView : UserControl
+    public partial class ChatInteractivityView : UserControl
     {
-        public ChatMainPanelView()
+        public ChatInteractivityView()
         {
             InitializeComponent();
         }

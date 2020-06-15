@@ -31,8 +31,8 @@
     <Color x:Key="BorderColor">#e0e0e0</Color>
     <Color x:Key="SecondaryBorderColor">#757575</Color>
     <Color x:Key="BackgroundColor">#eeeeee</Color>
-    <Color x:Key="RegionColor">#ffffff</Color>
-    <Color x:Key="SecondaryRegionColor">#eeeeee</Color>
+    <Color x:Key="RegionColor">#dddddd</Color>
+    <Color x:Key="SecondaryRegionColor">#dddddd</Color>
     <Color x:Key="ThirdlyRegionColor">White</Color>
     <Color x:Key="TitleColor">#326cf3</Color>
     <Color x:Key="SecondaryTitleColor">#326cf3</Color>

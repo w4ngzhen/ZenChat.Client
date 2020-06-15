@@ -75,6 +75,11 @@
     <Compile Include="ViewModels\AddressBook\AddressBookModuleViewModel.cs" />
     <Compile Include="ViewModels\Chat\ChatModuleViewModel.cs" />
     <Compile Include="ViewModels\Chat\Interactivity\ChatInteractivityViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Interactivity\Header\ChatHeaderViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Interactivity\MsgDisplay\ChatMsgDisplayViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Interactivity\MsgSend\ChatMsgSendToolBarViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Interactivity\MsgSend\ChatMsgSendToolItemViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Interactivity\MsgSend\ChatMsgSendViewModel.cs" />
     <Compile Include="ViewModels\Chat\List\ChatListItemViewModel.cs" />
     <Compile Include="ViewModels\Chat\List\ChatListViewModel.cs" />
     <Compile Include="ViewModels\ModuleListItemViewModel.cs" />
@@ -82,8 +87,20 @@
     <Compile Include="Views\Chat\ChatModuleView.xaml.cs">
       <DependentUpon>ChatModuleView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Chat\Interactivity\ChatMainPanelView.xaml.cs">
-      <DependentUpon>ChatMainPanelView.xaml</DependentUpon>
+    <Compile Include="Views\Chat\Interactivity\ChatInteractivityView.xaml.cs">
+      <DependentUpon>ChatInteractivityView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Chat\Interactivity\Header\ChatHeaderView.xaml.cs">
+      <DependentUpon>ChatHeaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Chat\Interactivity\MsgDisplay\ChatMsgDisplayView.xaml.cs">
+      <DependentUpon>ChatMsgDisplayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Chat\Interactivity\MsgSend\ChatMsgSendToolBarView.xaml.cs">
+      <DependentUpon>ChatMsgSendToolBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Chat\Interactivity\MsgSend\ChatMsgSendView.xaml.cs">
+      <DependentUpon>ChatMsgSendView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Chat\List\ChatListItem.xaml.cs">
       <DependentUpon>ChatListItem.xaml</DependentUpon>
@@ -151,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\Border\BorderStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ListBox\ListBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -163,9 +184,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Chat\Interactivity\ChatMainPanelView.xaml">
+    <Page Include="Views\Chat\Interactivity\ChatInteractivityView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Chat\Interactivity\Header\ChatHeaderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Chat\Interactivity\MsgDisplay\ChatMsgDisplayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Chat\Interactivity\MsgSend\ChatMsgSendToolBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Chat\Interactivity\MsgSend\ChatMsgSendView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Chat\List\ChatListItem.xaml">
       <Generator>MSBuild:Compile</Generator>

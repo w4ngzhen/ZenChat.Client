@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ZenChat.Views.Chat.Interactivity.MsgSend.ChatMsgSendView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZenChat.Views.Chat.Interactivity.MsgSend"
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="500">
+    <Border BorderThickness="0">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <ContentControl x:Name="ChatMsgSendToolBar"/>
+            <RichTextBox 
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                />
+            <Button 
+                Grid.Row="2" Grid.Column="1"
+                Margin="5"
+                />
+        </Grid>
+    </Border>
+</UserControl>

@@ -10,7 +10,7 @@ namespace ZenChat.ViewModels.Chat.List
 
         public string Name { get; set; }
 
-        public DateTime UpDateTime { get; set; }
+        public DateTime UpdateTime { get; set; }
 
         public string Abstract { get; set; }
     }
