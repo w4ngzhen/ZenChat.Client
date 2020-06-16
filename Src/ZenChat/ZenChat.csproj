@@ -68,6 +68,7 @@
     </ApplicationDefinition>
     <Compile Include="Converters\ChatListUpdateTimeToStringConverter.cs" />
     <Compile Include="Converters\DateTimeToStringConverter.cs" />
+    <Compile Include="Events\ChatMsgSendToolItemSelectedEventArgs.cs" />
     <Compile Include="Events\ModuleActivateEventArgs.cs" />
     <Compile Include="Events\ModuleListItemSelectedEventArgs.cs" />
     <Compile Include="Module.cs" />
@@ -152,6 +153,10 @@
     <Resource Include="Styles\Base\Fonts\ChatMsgSendToolIconFont.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Styles\Base\BaseStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Base\Colors\Brushes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +177,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\Button\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ListBox\ListBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -179,6 +188,10 @@
     <Page Include="Styles\ControlStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\RichTextBox\RichTextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Chat\ChatModuleView.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -4,5 +4,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Border/BorderStyle.xaml"/>
         <ResourceDictionary Source="ListBox/ListBoxStyle.xaml"/>
+        <ResourceDictionary Source="RichTextBox/RichTextBoxStyle.xaml"/>
+        <ResourceDictionary Source="Button/ButtonStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

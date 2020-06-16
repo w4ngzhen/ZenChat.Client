@@ -6,9 +6,38 @@
              xmlns:local="clr-namespace:ZenChat.Views.Chat.Interactivity.Header"
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="500">
-    <Border BorderThickness="0 0 0 1">
+    <UserControl.Resources>
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="Margin" Value="10 0 0 0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+        </Style>
+    </UserControl.Resources>
+    <Border BorderThickness="0 1 0 1">
         <Grid>
-            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="15"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="0" 
+                       Style="{StaticResource HeaderTextStyle}"
+                       VerticalAlignment="Center"
+                       Text="有很多很多很多很多的字"
+                       FontSize="20"
+                       />
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       Style="{StaticResource HeaderTextStyle}"
+                       VerticalAlignment="Bottom"
+                       Text="有很多很多很多很多的字，超过当前的长度的"
+                       FontSize="14"
+                       />
         </Grid>
     </Border>
 </UserControl>

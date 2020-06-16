@@ -20,10 +20,16 @@
             <ContentControl x:Name="ChatMsgSendToolBar"/>
             <RichTextBox 
                 Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                />
+                >
+                <RichTextBox.Document>
+                    <FlowDocument Style="{StaticResource ChatMsgSendFlowDocumentStyle}"
+                                  />
+                </RichTextBox.Document>
+            </RichTextBox>
             <Button 
                 Grid.Row="2" Grid.Column="1"
                 Margin="5"
+                Content="发送"
                 />
         </Grid>
     </Border>
