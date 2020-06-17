@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindowView" Height="600" Width="860"
+        Title="{StaticResource Title}" Height="600" Width="860" Icon="{StaticResource Icon}"
         >
     <Grid>
         <Grid.ColumnDefinitions>

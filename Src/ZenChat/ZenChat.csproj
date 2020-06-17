@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon48.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Caliburn.Micro.Core.3.2.0\lib\net40\Caliburn.Micro.dll</HintPath>
@@ -74,6 +77,8 @@
     <Compile Include="Module.cs" />
     <Compile Include="Tests\DataGenerator.cs" />
     <Compile Include="ViewModels\AddressBook\AddressBookModuleViewModel.cs" />
+    <Compile Include="ViewModels\AddressBook\Group\AddressBookGroupViewModel.cs" />
+    <Compile Include="ViewModels\AddressBook\QueryBook\AddressBookQueryBookViewModel.cs" />
     <Compile Include="ViewModels\Chat\ChatModuleViewModel.cs" />
     <Compile Include="ViewModels\Chat\Interactivity\ChatInteractivityViewModel.cs" />
     <Compile Include="ViewModels\Chat\Interactivity\Header\ChatHeaderViewModel.cs" />
@@ -85,6 +90,15 @@
     <Compile Include="ViewModels\Chat\List\ChatListViewModel.cs" />
     <Compile Include="ViewModels\ModuleListItemViewModel.cs" />
     <Compile Include="ViewModels\ModuleListViewModel.cs" />
+    <Compile Include="Views\AddressBook\AddressBookModuleView.xaml.cs">
+      <DependentUpon>AddressBookModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddressBook\Group\AddressBookGroupView.xaml.cs">
+      <DependentUpon>AddressBookGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddressBook\QueryBook\AddressBookQueryBookView.xaml.cs">
+      <DependentUpon>AddressBookQueryBookView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Chat\ChatModuleView.xaml.cs">
       <DependentUpon>ChatModuleView.xaml</DependentUpon>
     </Compile>
@@ -173,6 +187,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\Base\Images.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Base\Strings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Border\BorderStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -190,6 +212,22 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\RichTextBox\RichTextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TabControl\TabControlStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddressBook\AddressBookModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddressBook\Group\AddressBookGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddressBook\QueryBook\AddressBookQueryBookView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -237,8 +275,14 @@
   <ItemGroup>
     <Folder Include="ViewModels\Settings\" />
     <Folder Include="ViewModels\Tool\" />
-    <Folder Include="Views\AddressBook\" />
     <Folder Include="Views\Tool\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Styles\icon32.ico" />
+    <Resource Include="Styles\icon48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon48.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
