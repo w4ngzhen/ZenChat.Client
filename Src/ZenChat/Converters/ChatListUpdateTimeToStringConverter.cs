@@ -18,7 +18,7 @@ namespace ZenChat.Converters
             TimeSpan span = now.Subtract(updateTime);
             if (span.TotalSeconds > 24 * 60 * 60) 
             {
-                return updateTime.ToString("MM-dd"); // 超过1天，只显示日期
+                return updateTime.ToString("yy/MM/dd"); // 超过1天，只显示日期
             }
             else
             {

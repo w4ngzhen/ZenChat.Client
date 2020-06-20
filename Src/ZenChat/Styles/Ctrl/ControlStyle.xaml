@@ -6,5 +6,7 @@
         <ResourceDictionary Source="ListBox/ListBoxStyle.xaml"/>
         <ResourceDictionary Source="RichTextBox/RichTextBoxStyle.xaml"/>
         <ResourceDictionary Source="Button/ButtonStyle.xaml"/>
+        <ResourceDictionary Source="TabControl/TabControlStyle.xaml"/>
+        <ResourceDictionary Source="ScrollViewer/ScrollViewerStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ZenChat.Views.AddressBook.QueryBook
+namespace ZenChat.Views.AddressBook.Contact
 {
     /// <summary>
-    /// Interaction logic for AddressBookQueryBookView.xaml
+    /// Interaction logic for AddressBookContactView.xaml
     /// </summary>
-    public partial class AddressBookQueryBookView : UserControl
+    public partial class AddressBookContactView : UserControl
     {
-        public AddressBookQueryBookView()
+        public AddressBookContactView()
         {
             InitializeComponent();
         }

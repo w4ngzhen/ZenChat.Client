@@ -4,13 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="500">
+             d:DesignHeight="500" d:DesignWidth="640">
     <Border BorderThickness="1 0 1 0">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="140"/>
+                <RowDefinition Height="145"/>
             </Grid.RowDefinitions>
             <ContentControl Grid.Row="0" x:Name="ChatHeader"/>
             <ContentControl Grid.Row="1" x:Name="ChatMsgDisplay"/>

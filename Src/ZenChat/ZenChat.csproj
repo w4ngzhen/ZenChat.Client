@@ -77,8 +77,8 @@
     <Compile Include="Module.cs" />
     <Compile Include="Tests\DataGenerator.cs" />
     <Compile Include="ViewModels\AddressBook\AddressBookModuleViewModel.cs" />
+    <Compile Include="ViewModels\AddressBook\Contact\AddressBookContactViewModel.cs" />
     <Compile Include="ViewModels\AddressBook\Group\AddressBookGroupViewModel.cs" />
-    <Compile Include="ViewModels\AddressBook\QueryBook\AddressBookQueryBookViewModel.cs" />
     <Compile Include="ViewModels\Chat\ChatModuleViewModel.cs" />
     <Compile Include="ViewModels\Chat\Interactivity\ChatInteractivityViewModel.cs" />
     <Compile Include="ViewModels\Chat\Interactivity\Header\ChatHeaderViewModel.cs" />
@@ -93,11 +93,11 @@
     <Compile Include="Views\AddressBook\AddressBookModuleView.xaml.cs">
       <DependentUpon>AddressBookModuleView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AddressBook\Contact\AddressBookContactView.xaml.cs">
+      <DependentUpon>AddressBookContactView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddressBook\Group\AddressBookGroupView.xaml.cs">
       <DependentUpon>AddressBookGroupView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AddressBook\QueryBook\AddressBookQueryBookView.xaml.cs">
-      <DependentUpon>AddressBookQueryBookView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Chat\ChatModuleView.xaml.cs">
       <DependentUpon>ChatModuleView.xaml</DependentUpon>
@@ -116,9 +116,6 @@
     </Compile>
     <Compile Include="Views\Chat\Interactivity\MsgSend\ChatMsgSendView.xaml.cs">
       <DependentUpon>ChatMsgSendView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Chat\List\ChatListItem.xaml.cs">
-      <DependentUpon>ChatListItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Chat\List\ChatListView.xaml.cs">
       <DependentUpon>ChatListView.xaml</DependentUpon>
@@ -195,27 +192,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\Border\BorderStyle.xaml">
+    <Page Include="Styles\Ctrl\Border\BorderStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\Button\ButtonStyle.xaml">
+    <Page Include="Styles\Ctrl\Button\ButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\ListBox\ListBoxStyle.xaml">
+    <Page Include="Styles\Ctrl\ListBox\ListBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Styles\ControlStyle.xaml">
+    <Page Include="Styles\Ctrl\ControlStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Styles\RichTextBox\RichTextBoxStyle.xaml">
+    <Page Include="Styles\Ctrl\RichTextBox\RichTextBoxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\TabControl\TabControlStyle.xaml">
+    <Page Include="Styles\Ctrl\ScrollViewer\ScrollViewerStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Ctrl\TabControl\TabControlStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -223,11 +224,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AddressBook\Group\AddressBookGroupView.xaml">
+    <Page Include="Views\AddressBook\Contact\AddressBookContactView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AddressBook\QueryBook\AddressBookQueryBookView.xaml">
+    <Page Include="Views\AddressBook\Group\AddressBookGroupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -254,10 +255,6 @@
     <Page Include="Views\Chat\Interactivity\MsgSend\ChatMsgSendView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Chat\List\ChatListItem.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Chat\List\ChatListView.xaml">
       <Generator>MSBuild:Compile</Generator>

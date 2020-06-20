@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.Composition;
+using ZenChat.ViewModels.AddressBook.Contact;
 using ZenChat.ViewModels.AddressBook.Group;
-using ZenChat.ViewModels.AddressBook.QueryBook;
 
 namespace ZenChat.ViewModels.AddressBook
 {
+    [Export]
     public class AddressBookModuleViewModel : Module
     {
         public override string Name
@@ -16,16 +17,17 @@ namespace ZenChat.ViewModels.AddressBook
             get { return "通讯录"; }
         }
 
+        public AddressBookContactViewModel Contact { get; set; }
+
         public AddressBookGroupViewModel Group { get; set; }
-        public AddressBookQueryBookViewModel QueryBook { get; set; }
 
         [ImportingConstructor]
         public AddressBookModuleViewModel(
-            AddressBookGroupViewModel addressBookGroupViewModel, 
-            AddressBookQueryBookViewModel addressBookQueryBookViewModel)
+            AddressBookContactViewModel contact,
+            AddressBookGroupViewModel group)
         {
-            Group = addressBookGroupViewModel;
-            QueryBook = addressBookQueryBookViewModel;
+            Contact = contact;
+            Group = group;
         }
     }
 }

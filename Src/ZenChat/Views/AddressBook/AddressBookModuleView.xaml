@@ -7,11 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-      <TabControl>
-          <TabItem Header="群聊">
-          </TabItem>
-          <TabItem Header="查询">
-          </TabItem>
-      </TabControl>
+        <TabControl Style="{StaticResource AddressBookTabControlStyle}">
+            <TabItem Header="联系人">
+                <ContentControl x:Name="Contact"/>
+            </TabItem>
+            <TabItem Header="群聊">
+                <ContentControl x:Name="Group"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </UserControl>

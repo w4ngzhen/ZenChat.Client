@@ -12,7 +12,7 @@
                 <ResourceDictionary Source="Styles/Base/Colors/Brushes.xaml"/>
                 <ResourceDictionary Source="Styles/Base/Converters.xaml"/>
                 <ResourceDictionary Source="Styles/Base/Fonts/Fonts.xaml"/>
-                <ResourceDictionary Source="Styles/ControlStyle.xaml" />
+                <ResourceDictionary Source="Styles/Ctrl/ControlStyle.xaml" />
                 <ResourceDictionary>
                     <zenChat:ZenChatBootstrapper x:Key="Bootstrapper"/>
                 </ResourceDictionary>

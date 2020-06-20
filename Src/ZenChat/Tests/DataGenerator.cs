@@ -25,6 +25,10 @@ namespace ZenChat.Tests
         {
             List<ChatListItemViewModel> chatListItemViewModels = 
                 JsonConvert.DeserializeObject<List<ChatListItemViewModel>>(ReadChatListItemTestData());
+            if (chatListItemViewModels.Count > 0)
+            {
+                chatListItemViewModels[0].UpdateTime = DateTime.Now;
+            }
             return chatListItemViewModels;
         }
 
