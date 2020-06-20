@@ -107,8 +107,9 @@
                             <ControlTemplate TargetType="{x:Type ListBoxItem}">
                                 <Border Height="40" x:Name="ItemBorder" cal:Message.Attach="[Event MouseDown] = [Action SelectItem]">
                                     <TextBlock Text="{Binding Icon}"
+                                               x:Name="IconFont"
                                                FontFamily="{StaticResource ModuleListItemIconFont}"
-                                               FontSize="32"
+                                               FontSize="24"
                                                Foreground="{StaticResource TextIconBrush}"
                                                VerticalAlignment="Center"
                                                HorizontalAlignment="Center"
@@ -127,6 +128,7 @@
                                     </DataTrigger>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter TargetName="ItemBorder" Property="Background" Value="{StaticResource LightPrimaryBrush}" />
+                                        <Setter TargetName="ItemBorder" Property="Cursor" Value="Hand" />
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
