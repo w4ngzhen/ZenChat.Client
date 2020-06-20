@@ -124,7 +124,7 @@
                                 <ControlTemplate.Triggers>
                                     <!-- Bind ModuleListItem instance IsSelected Property -->
                                     <DataTrigger Binding="{Binding IsSelected}" Value="True">
-                                        <Setter TargetName="IconFont" Property="Foreground" Value="{StaticResource PrimaryTextBrush}" />
+                                        <Setter TargetName="ItemBorder" Property="Background" Value="{StaticResource LightPrimaryBrush}" />
                                     </DataTrigger>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter TargetName="ItemBorder" Property="Background" Value="{StaticResource LightPrimaryBrush}" />
