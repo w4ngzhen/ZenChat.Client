@@ -4,6 +4,7 @@
                     xmlns:local="clr-namespace:ZenChat">
     <SolidColorBrush o:Freeze="True" x:Key="LightPrimaryBrush" Color="{DynamicResource LightPrimaryColor}"/>
     <SolidColorBrush o:Freeze="True" x:Key="PrimaryBrush" Color="{DynamicResource PrimaryColor}"/>
+    <SolidColorBrush o:Freeze="True" x:Key="HeavyPrimaryBrush" Color="{DynamicResource HeavyPrimaryColor}"/>
     <SolidColorBrush o:Freeze="True" x:Key="DarkPrimaryBrush" Color="{DynamicResource DarkPrimaryColor}"/>
 
     <SolidColorBrush o:Freeze="True" x:Key="PrimaryTextBrush" Color="{DynamicResource PrimaryTextColor}"/>
