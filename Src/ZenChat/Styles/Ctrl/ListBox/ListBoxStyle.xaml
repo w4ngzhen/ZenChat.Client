@@ -37,8 +37,9 @@
                                 <ColumnDefinition Width="5"/>
                                 <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="5"/>
-                                <ColumnDefinition Width="105*"/>
-                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="5"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
@@ -64,12 +65,15 @@
                                        />
                             <TextBlock Grid.Row="1" 
                                        Grid.Column="4"
+                                       Grid.ColumnSpan="2"
                                        Foreground="{StaticResource SecondaryTextBrush}"
                                        Text="{Binding UpdateTime, Converter={StaticResource ChatListUpdateTimeToStringConverter}}"
                                        VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
                                        />
                             <TextBlock Grid.Row="2" 
                                        Grid.Column="3"
+                                       Grid.ColumnSpan="2"
                                        HorizontalAlignment="Stretch"
                                        Foreground="{StaticResource SecondaryTextBrush}"
                                        Text="{Binding Abstract}"
